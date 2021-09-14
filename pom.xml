@@ -13,7 +13,7 @@
     </parent>
 
     <artifactId>iwvg-devops-sanchez-miguelangel</artifactId>
-    <groupId>es.upm.miw</groupId>
+    <groupId>mangelsanchezUPM</groupId>
     <version>2.0.0</version>
     <packaging>jar</packaging>
 
