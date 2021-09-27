@@ -51,11 +51,15 @@ class FractionTest {
     @Test
     void testIsProper() {
         assertTrue(this.fraction.isProper());
+        this.fraction = new Fraction(4,2);
+        assertFalse(this.fraction.isProper());
     }
 
     @Test
     void testIsImproper() {
         assertFalse(this.fraction.isImproper());
+        this.fraction = new Fraction(4,2);
+        assertTrue(this.fraction.isImproper());
     }
 
     @Test
