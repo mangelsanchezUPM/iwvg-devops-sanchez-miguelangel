@@ -3,7 +3,7 @@
 ### Miguel Ángel Sánchez Ordaz
 [![DevOps](https://github.com/mangelsanchezUPM/iwvg-devops-sanchez-miguelangel/actions/workflows/test-sonar.yml/badge.svg)](https://github.com/mangelsanchezUPM/iwvg-devops-sanchez-miguelangel/actions/workflows/test-sonar.yml)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=mangelsanchezUPM_iwvg-devops-sanchez-miguelangel&metric=alert_status)](https://sonarcloud.io/dashboard?id=mangelsanchezUPM_iwvg-devops-sanchez-miguelangel)
-[![BCH compliance](https://bettercodehub.com/edge/badge/mangelsanchezUPM/iwvg-devops-sanchez-miguelangel?branch=master)](https://bettercodehub.com/)
+[![BCH compliance](https://bettercodehub.com/edge/badge/mangelsanchezUPM/iwvg-devops-sanchez-miguelangel?branch=develop)](https://bettercodehub.com/)
 [![Heroku broken](https://iwvg-devops-sanchez-miguelange.herokuapp.com/system/version-badge)](https://iwvg-devops-sanchez-miguelange.herokuapp.com/swagger-ui.html)
 
 ### Descripción
