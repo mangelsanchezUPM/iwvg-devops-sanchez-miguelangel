@@ -46,8 +46,12 @@ public class Searches {
         return null;
     }
 
-    public Fraction findFirstFractionDivisionByUserId(String id) {
-        return null;
+    public Fraction findFractionDivisionByUserId(String id) {
+        return new UsersDatabase().findAll()
+                .filter(user -> user.getId().equals(id))
+                .flatMap(user -> user.getFractions().stream())
+                .reduce((fraction1, fraction2) -> { fraction1.divide(fraction2); return fraction1; } )
+                .get();
     }
 
     public Double findFirstDecimalFractionByUserName(String name) {
