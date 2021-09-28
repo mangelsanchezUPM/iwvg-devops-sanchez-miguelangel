@@ -27,4 +27,12 @@ public class SearchesTest {
     void testFindUserFamilyNameInitialByAnyProperFraction() {
         assertEquals(List.of("O.", "A.", "O.", "A."), search.findUserFamilyNameInitialByAnyProperFraction().collect(Collectors.toList()));
     }
+
+    @Test
+    void testFindDecimalFractionByUserName() {
+        String userName = "Paula";
+        assertEquals(List.of(1.0, 1.0, Double.NaN, Double.POSITIVE_INFINITY, 1.0), search.findDecimalFractionByUserName(userName).collect(Collectors.toList()));
+        userName = "Antonio";
+        assertEquals(List.of(0.0, -0.0, 0.0), search.findDecimalFractionByUserName(userName).collect(Collectors.toList()));
+    }
 }
