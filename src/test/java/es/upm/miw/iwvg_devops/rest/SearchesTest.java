@@ -2,16 +2,10 @@ package es.upm.miw.iwvg_devops.rest;
 
 import es.upm.miw.iwvg_devops.code.Fraction;
 import es.upm.miw.iwvg_devops.code.Searches;
-import es.upm.miw.iwvg_devops.code.User;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
-import java.util.Optional;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -34,5 +28,13 @@ public class SearchesTest {
         assertEquals(List.of(1.0, 1.0, Double.NaN, Double.POSITIVE_INFINITY, 1.0), search.findDecimalFractionByUserName(userName).collect(Collectors.toList()));
         userName = "Antonio";
         assertEquals(List.of(0.0, -0.0, 0.0), search.findDecimalFractionByUserName(userName).collect(Collectors.toList()));
+    }
+
+    @Test
+    void testFindFractionDivisionByUserId() {
+        String userId = "3";
+        assertEquals(new Fraction(-4,5), search.findFractionDivisionByUserId(userId));
+        userId = "4";
+        assertEquals(new Fraction(1,1), search.findFractionDivisionByUserId(userId));
     }
 }
