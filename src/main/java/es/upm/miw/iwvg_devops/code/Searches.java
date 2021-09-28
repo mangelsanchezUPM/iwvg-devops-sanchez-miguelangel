@@ -23,7 +23,7 @@ public class Searches {
                 });
 
         if (optionalFraction.isEmpty())
-            throw new NotFoundException("Fraction division not found with User id " + id);
+            throw new NotFoundException("Fraction division not found with User ID: " + id);
 
         return optionalFraction.get();
     }
