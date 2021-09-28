@@ -9,12 +9,12 @@ import java.util.ArrayList;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class UserTest {
+class UserTest {
     private User user;
 
     @BeforeEach
     void before() {
-        this.user = new User("0", "Name", "FName", new ArrayList<Fraction>());
+        this.user = new User("0", "Name", "FName", new ArrayList<>());
     }
 
     @Test
@@ -51,7 +51,7 @@ public class UserTest {
 
     @Test
     void testSetFractions() {
-        ArrayList<Fraction> fractionList = new ArrayList<Fraction>();
+        ArrayList<Fraction> fractionList = new ArrayList<>();
         fractionList.add(new Fraction(2,3));
         this.user.setFractions(fractionList);
         assertEquals(fractionList, this.user.getFractions());
