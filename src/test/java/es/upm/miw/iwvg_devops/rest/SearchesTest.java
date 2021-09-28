@@ -3,13 +3,16 @@ package es.upm.miw.iwvg_devops.rest;
 import es.upm.miw.iwvg_devops.code.Fraction;
 import es.upm.miw.iwvg_devops.code.Searches;
 import org.junit.jupiter.api.Test;
+import org.mockito.internal.matchers.Not;
+import org.webjars.NotFoundException;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
-public class SearchesTest {
+class SearchesTest {
     private Searches search = new Searches();
 
     @Test
@@ -36,5 +39,11 @@ public class SearchesTest {
         assertEquals(new Fraction(-4,5), search.findFractionDivisionByUserId(userId));
         userId = "4";
         assertEquals(new Fraction(1,1), search.findFractionDivisionByUserId(userId));
+    }
+
+    @Test
+    void testFindFractionDivisionByUserIdException() {
+        String userId = "100";
+        assertThrows(NotFoundException.class, () -> search.findFractionDivisionByUserId(userId));
     }
 }
