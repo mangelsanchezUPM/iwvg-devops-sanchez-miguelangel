@@ -15,3 +15,11 @@ Trabajo práctico realizado para la asignatura Ingeniería Web: Visión General 
 2. Fraction findFractionDivisionByUserId(String id)
 3. Fraction findHighestFraction()
 4. Stream<Double> findDecimalFractionByUserName(String name)
+
+#### Grafo de git
+##### Sprint 3
+![](./docs/Sprint3.JPG)
+##### Sprint 2
+![](./docs/Sprint2.JPG)
+##### Sprint 1
+![](./docs/Sprint1.JPG)
